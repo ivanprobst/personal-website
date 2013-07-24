@@ -1,0 +1,29 @@
+/*!
+ * TITLE
+ *
+ *
+ * description
+ */
+
+body{
+	background: url("../img/background.png") #ccc;
+}
+
+
+/* LINKS SECTION */
+.links{
+	overflow: hidden;
+}
+
+.links ul{
+	float: left;
+	list-style-type: none;
+}
+	.links ul li{
+		float: left;
+		width: 200px; height: 100px;
+		margin-right: 100px;
+	}
+		.links ul h2{
+			font-size: 2em;
+		}
