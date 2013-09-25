@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-	<title>Ivan Probst | Just that guy</title>
+	<title>Ivan Probst | To Neverland, and Beyond</title>
 
 	<meta charset="UTF-8">
 	<link rel="icon" type="image/png" href="img/favicon.png">
@@ -33,7 +33,7 @@
 
 		}
 		header{
-			width: 43%;
+			width: 45%;
 		}
 			h1{
 				padding: 60px 0 20px 70px;
@@ -65,16 +65,15 @@
 
 	<script>
 	$(function() {
-		var windowWidth = 0;
 		var windowHeight = 0;
 
 		var updateBackgroundSize = function(){
- 			windowWidth = $(window).width();
  			windowHeight = $(window).height();
- 			console.log("size: "+windowWidth+" x "+windowHeight);
+ 			console.log("height: "+windowHeight);
 			$("#background").height(windowHeight);
 		};
 
+		console.log("update background...");
 		updateBackgroundSize();
 		$(window).resize(updateBackgroundSize);
     });
@@ -85,8 +84,8 @@
 	<header>
 		<h1>Ivan Probst</h1>
 		<h2>
-			Exploring all the things, always learning,<br>
-			always crafting. Just that curious guy who is ...
+			On my way to Neverland, always learning,<br/>
+			always creating. Ever naive, and … 
 		</h2>
 	</header>
 	<section id="container">
@@ -94,12 +93,12 @@
 			<ul>
 				<li><i class="icon-twitter"></i> tweeting <a target="_blank" href="https://twitter.com/ivanprobst">the world</a></li>
 				<li><i class="icon-plane"></i> travelling <a target="_blank" href="http://wanderingdiaries.tumblr.com/">these places</a></li>
-				<li><i class="icon-camera"></i> taking <a target="_blank" href="http://500px.com/ivanprobst">decent photos</a></li>
+				<li><i class="icon-camera"></i> taking <a target="_blank" href="http://500px.com/ivanprobst">different photos</a></li>
 				<li><i class="icon-book"></i> reading <a target="_blank" href="https://www.goodreads.com/user/show/21165676-ivan-probst">random stuff</a></li>
 				<!--<li><i class="icon-eject"></i> editing <a target="_blank" href="">da vids</a></li>
 				<li><i class="icon-pencil"></i> writing <a target="_blank" href="">funny novels</a></li>-->
 				<li>
-					... and apparently fishing, but just for the sake of the picture (if you think this deserves a more profound discussion: <a href="mailto:ivan.probst@gmail.com" rel="say hi">ivan.probst[at]gmail.com</a>).
+					... and apparently fishing, but just for the sake of the picture (if you think this deserves a deeper discussion: <a href="mailto:ivan.probst@gmail.com" rel="say hi">ivan.probst[at]gmail.com</a>).
 				</li>
 			</ul>
 		</nav>
