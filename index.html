@@ -4,6 +4,7 @@
 	<title>Ivan Probst | Just that guy</title>
 
 	<meta charset="UTF-8">
+	<link rel="icon" type="image/png" href="img/favicon.png">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
@@ -26,7 +27,8 @@
 			font-family:  'Bitter', 'Helvetica', serif;
 			letter-spacing: 1.5px
 		}
-		#background{
+		img#background{
+			display: none;
 			position: absolute;
 			top: 0; right: 0;
 		}
@@ -65,6 +67,8 @@
 		var updateBackgroundSize = function(){
  			windowWidth = $(window).width();
  			windowHeight = $(window).height();
+ 			console.log("size: "+windowWidth+" x "+windowHeight);
+ 			$("img#background").show();
 			$("#background").height(windowHeight);
 			$("header, section#container, footer").width(0.9*(windowWidth - $("#background").width()));
 		};
@@ -75,7 +79,7 @@
 	</script>
 </head>
 <body>
-	<img id="background" src="img/fishin2.jpg">
+	<img id="background" src="img/fishing.jpg">
 	<header>
 		<h1>Ivan Probst</h1>
 		<h2>
