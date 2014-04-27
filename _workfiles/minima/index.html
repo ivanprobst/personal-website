@@ -87,48 +87,51 @@
 		}
 
 		@media only screen and (max-device-width : 568px) {
-			body {
-				height: 100%; /* ??? */
-			}
+			body {}
 
 			section{
 				display: block;
 				float: none;
-				height: 100%; /* ??? */
+				height: auto;
 			}
 				section#left{
 					width: 100%;
 				}
 					section#left img{
-						right: auto;
+						display: block; position: relative;
+						width: 70%;
 					}
 				section#right{
 					width: 100%;
 				}
 					section#right article{
 						position: relative;
-						width: 90%; max-width: none;
-						height: 70%; /* ??? */
-						padding: 10px;
+						width: 100%; max-width: none;
+						height: auto;
+						padding: 0;
 						background: none;
+						text-align: center;
 					}
-						h1{
-							font-size: 6vw;
-						}
-						h2{
-							font-size: 4vw;
-						}
-						nav ul{}
+						h1{font-size: 8vw;}
+						h2{font-size: 6vw;}
+						nav ul{margin-top: 45px;}
 							nav ul li{
 								position: relative;
+								top: auto !important;
+								left: auto !important;
+								bottom: auto !important;
+								right: auto !important;
+								margin-bottom: 30px;
 							}
-								nav ul li:hover{
-								}
-									nav ul li img{}
+								nav ul li:hover{}
+									nav ul li#tqt img{width: 80%;}
+									nav ul li#twitter img{width: 60%;}
+									nav ul li#vimeo img, nav ul li#flickr img{width: 40%;}
+									nav ul li#goodreads img{width: 70%;}
 
 			footer{
 				position: relative;
-				font-size: 4vw;
+				font-size: 6vw;
 			}
 		}
 	</style>
