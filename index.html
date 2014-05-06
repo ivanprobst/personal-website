@@ -1,83 +1,151 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-	<title>Ivan Probst | To Neverland, and Beyond</title>
+	<title>Hey, my name is Ivan</title>
 
 	<meta charset="UTF-8">
-	<link rel="icon" type="image/png" href="img/favicon.png">
+	<link rel="icon" type="image/png" href="favicon.png">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
 
 	<style type="text/css" media="screen">
 		@import url(http://reset5.googlecode.com/hg/reset.min.css);
+		@import url(http://fonts.googleapis.com/css?family=Quicksand:300,400,700);
 
-		a{
-			color: #3e5e7f;
-			text-decoration: none;
-		}
-			a:hover{
-				border-bottom: 5px solid #3e5e7f;
-			}
-
+		html{height: 100%;}
 		body {
 			position: relative;
-			background: #050d10;
-			color: #cdd9e5;
-			font-family:  'Bitter', 'Helvetica', serif;
-			letter-spacing: 1.5px;
+			height: 100%;
+			color: #556270;
+			font-family: 'Quicksand', 'Helvetica', 'sans-serif';
 		}
-		img#background{
-			position: absolute;
-			top: 0; right: 0;
 
+		section{
+			display: none;
+			float: left;
+			overflow: hidden;
+			height: 100%;
 		}
-		header{
-			width: 45%;
-		}
-			h1{
-				padding: 60px 0 20px 70px;
-				font-size: 5.5em;
+			section#left{
+				position: relative;
+				width: 30%;
 			}
-			h2{
-				margin: 0 0 40px 100px;
-				font-size: 1.4em;
-				line-height: 1.4em;
-			}
-		nav{
-			margin: 0 0 0 130px;
-			width: 43%;
-		}
-			nav li{
-				margin-bottom: 28px;
-				font-size: 1.4em;
-				line-height: 1.6em;
-			}
-			nav li:last-child{
-				margin: 40px 0 0 30px;
-				font-size: 0.9em;
-			}
-				nav li i{
-					padding-right: 10px;
+				section#left img{
+				 	position: absolute;
+					width: 90%;
+					margin: 30px auto;
+				 	right: 0;
 				}
-				nav li span{padding-left: 17px;}
+			section#right{
+				width: 70%;
+			}
+				section#right article{
+					position: relative;
+					width: 78%; height: 70%; max-width: 750px;
+					margin-top: 30px;
+					padding: 5% 5% 4% 13%;
+					background: url(assets/gfx/bubble.png) no-repeat;
+					background-size: 100% 100%;
+				}
+					h1{
+						font-size: 4vw;
+						font-weight: bold;
+						text-transform: uppercase;
+					}
+					h2{
+						margin-top: 20px;
+						padding-left: 5px;
+						font-size: 2.8vw;
+						font-weight: normal;
+						text-transform: lowercase;
+					}
+					nav ul{}
+						nav ul li{
+							position: absolute;
+							opacity: 1;
+							-webkit-transition:0.5s; transition:0.5s;
+						}
+							nav ul li#tqt{top: 52%; left: 30%;}
+							nav ul li#twitter{top: 35%; left: 20%;}
+							nav ul li#vimeo{top: 35%; right: 15%;}
+							nav ul li#flickr{bottom: 15%; left: 20%;}
+							nav ul li#goodreads{bottom: 15%; right: 15%;}
+							nav ul li:hover{
+								opacity: 0.7;
+								-webkit-transition:0.5s; transition:0.5s;
+							}
+								nav ul li img{width: 80%;}
+
+		footer{
+			position: absolute;
+			width: 96%;
+			bottom: 0;
+			padding: 20px 2%;
+			font-size: 2em;
+			text-align: right;
+			color: #fff;
+			background: #EF6A6B;
+		}
+			footer a{
+				color: #fff;
+			}
+
+		@media only screen and (max-device-width : 568px) {
+			body {}
+
+			section{
+				display: block;
+				float: none;
+				height: auto;
+			}
+				section#left{
+					width: 100%;
+				}
+					section#left img{
+						display: block; position: relative;
+						width: 70%;
+					}
+				section#right{
+					width: 100%;
+				}
+					section#right article{
+						position: relative;
+						width: 100%; max-width: none;
+						height: auto;
+						padding: 0;
+						background: none;
+						text-align: center;
+					}
+						h1{font-size: 8vw;}
+						h2{font-size: 6vw;}
+						nav ul{margin-top: 45px;}
+							nav ul li{
+								position: relative;
+								top: auto !important;
+								left: auto !important;
+								bottom: auto !important;
+								right: auto !important;
+								margin-bottom: 30px;
+							}
+								nav ul li:hover{}
+									nav ul li#tqt img{width: 80%;}
+									nav ul li#twitter img{width: 60%;}
+									nav ul li#vimeo img, nav ul li#flickr img{width: 40%;}
+									nav ul li#goodreads img{width: 70%;}
+
+			footer{
+				position: relative;
+				font-size: 6vw;
+			}
+		}
 	</style>
 
 	<!-- SCALING -->
 	<script>
-	$(function() {
-		var windowHeight = 0;
-
-		var updateBackgroundSize = function(){
- 			windowHeight = $(window).height();
- 			console.log("height: "+windowHeight);
-			$("#background").height(windowHeight);
-		};
-
-		console.log("update background...");
-		updateBackgroundSize();
-		$(window).resize(updateBackgroundSize);
-    });
+		$(function() {
+			$('section#left').fadeIn(1000, function(){
+				$('section#right').fadeIn(1000);
+			});
+	    });
 	</script>
 
 	<!-- ANALYTICS -->
@@ -95,28 +163,28 @@
 	</script>
 </head>
 <body>
-	<img id="background" src="img/fishing.jpg">
-	<header>
-		<h1>Ivan Probst</h1>
-		<h2>
-			On my way to Neverland, learning, creating, <br/>
-			playing with stuff. And also,  I … 
-		</h2>
-	</header>
-	<section id="container">
-		<nav>
-			<ul>
-				<li><i class="icon-twitter"></i>tweet <a target="_blank" href="https://twitter.com/ivanprobst">the world</a></li>
-				<li><i class="icon-camera"></i>take <a target="_blank" href="http://500px.com/ivanprobst">random photos</a></li>
-				<li><i class="icon-book"></i>read <a target="_blank" href="https://www.goodreads.com/user/show/21165676-ivan-probst">a few books</a></li>
-				<li><i class="icon-plane"></i>was travelling <a target="_blank" href="http://wanderingdiaries.tumblr.com/">these places</a></li>
-<li><i class="icon-quote-left"></i>publish <a target="_blank" href="http://thequotetribune.com">lovely quotes</a></li>
-				<li>
-					... and apparently fish, but just for the sake of the picture<br>
-					<span>(we can talk about it: <a href="mailto:ivan.probst@gmail.com" rel="say hi">ivan.probst[at]gmail.com</a>).</span>
-				</li>
-			</ul>
-		</nav>
+	<section id="left">
+		<img src="assets/gfx/head.png">
 	</section>
+
+	<section id="right">
+		<article>
+			<h1>Hey, my name is Ivan</h1>
+			<h2>It's nice to see you here.</h2>
+			<nav>
+				<ul>
+					<li id="twitter"><a target="_blank" href="https://twitter.com/ivanprobst"><img src="assets/gfx/icon-twitter.png"></a></li>
+					<li id="flickr"><a target="_blank" href="https://www.flickr.com/photos/ivanprobst/"><img src="assets/gfx/icon-flickr.png"></a></li>
+					<li id="tqt"><a target="_blank" href="http://thequotetribune.com"><img src="assets/gfx/icon-thequotetribune.png"></a></li>
+					<li id="goodreads"><a target="_blank" href="https://www.goodreads.com/user/show/21165676-ivan-probst"><img src="assets/gfx/icon-goodreads.png"></a></li>
+					<li id="vimeo"><a target="_blank" href="https://vimeo.com/ivanprobst/videos"><img src="assets/gfx/icon-vimeo.png"></a></li>
+				</ul>
+			</nav>
+		</article>
+	</section>
+
+	<footer>
+		<p>say hi at <a href="mailto:ivan.probst@gmail.com">ivan.probst@gmail.com</a></p>
+	</footer>
 </body>
 </html>

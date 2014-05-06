@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Ivan Probst | To Neverland, and Beyond</title>
+
+	<meta charset="UTF-8">
+	<link rel="icon" type="image/png" href="img/favicon.png">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+
+	<style type="text/css" media="screen">
+		@import url(http://reset5.googlecode.com/hg/reset.min.css);
+
+		a{
+			color: #3e5e7f;
+			text-decoration: none;
+		}
+			a:hover{
+				border-bottom: 5px solid #3e5e7f;
+			}
+
+		body {
+			position: relative;
+			background: #050d10;
+			color: #cdd9e5;
+			font-family:  'Bitter', 'Helvetica', serif;
+			letter-spacing: 1.5px;
+		}
+		img#background{
+			position: absolute;
+			top: 0; right: 0;
+
+		}
+		header{
+			width: 45%;
+		}
+			h1{
+				padding: 60px 0 20px 70px;
+				font-size: 5.5em;
+			}
+			h2{
+				margin: 0 0 40px 100px;
+				font-size: 1.4em;
+				line-height: 1.4em;
+			}
+		nav{
+			margin: 0 0 0 130px;
+			width: 43%;
+		}
+			nav li{
+				margin-bottom: 28px;
+				font-size: 1.4em;
+				line-height: 1.6em;
+			}
+			nav li:last-child{
+				margin: 40px 0 0 30px;
+				font-size: 0.9em;
+			}
+				nav li i{
+					padding-right: 10px;
+				}
+				nav li span{padding-left: 17px;}
+	</style>
+
+	<!-- SCALING -->
+	<script>
+	$(function() {
+		var windowHeight = 0;
+
+		var updateBackgroundSize = function(){
+ 			windowHeight = $(window).height();
+ 			console.log("height: "+windowHeight);
+			$("#background").height(windowHeight);
+		};
+
+		console.log("update background...");
+		updateBackgroundSize();
+		$(window).resize(updateBackgroundSize);
+    });
+	</script>
+
+	<!-- ANALYTICS -->
+	<script type="text/javascript">
+  		var _gaq = _gaq || [];
+  		_gaq.push(['_setAccount', 'UA-12788850-1']);
+  		_gaq.push(['_setDomainName', 'ivanprobst.com']);
+  		_gaq.push(['_trackPageview']);
+
+  		(function() {
+    		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  		})();
+	</script>
+</head>
+<body>
+	<img id="background" src="img/fishing.jpg">
+	<header>
+		<h1>Ivan Probst</h1>
+		<h2>
+			On my way to Neverland, learning, creating, <br/>
+			playing with stuff. And also,  I … 
+		</h2>
+	</header>
+	<section id="container">
+		<nav>
+			<ul>
+				<li><i class="icon-twitter"></i>tweet <a target="_blank" href="https://twitter.com/ivanprobst">the world</a></li>
+				<li><i class="icon-camera"></i>take <a target="_blank" href="http://500px.com/ivanprobst">random photos</a></li>
+				<li><i class="icon-book"></i>read <a target="_blank" href="https://www.goodreads.com/user/show/21165676-ivan-probst">a few books</a></li>
+				<li><i class="icon-plane"></i>was travelling <a target="_blank" href="http://wanderingdiaries.tumblr.com/">these places</a></li>
+<li><i class="icon-quote-left"></i>publish <a target="_blank" href="http://thequotetribune.com">lovely quotes</a></li>
+				<li>
+					... and apparently fish, but just for the sake of the picture<br>
+					<span>(we can talk about it: <a href="mailto:ivan.probst@gmail.com" rel="say hi">ivan.probst[at]gmail.com</a>).</span>
+				</li>
+			</ul>
+		</nav>
+	</section>
+</body>
+</html>
